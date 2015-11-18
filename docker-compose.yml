@@ -1,0 +1,22 @@
+themosis:
+  restart: always
+  image: rluders/themosis-framework
+  expose:
+    - "80"
+  links:
+    - db
+  volumes:
+    - ./www:/var/www/project
+  environment:
+    HOSTNAME: development
+    VIRTUALHOST: symfony.local
+db:
+  restart: always
+  image: mariadb
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATBASE=themosis
+    - MYSQL_USER=themosis
+    - MYSQL_PASSWORD=root
+  expose:
+    - "3306"
