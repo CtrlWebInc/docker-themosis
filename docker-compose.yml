@@ -9,7 +9,7 @@ themosis:
     - ./www:/var/www/project
   environment:
     HOSTNAME: development
-    VIRTUALHOST: symfony.local
+    VIRTUALHOST: themosis.dev
 db:
   restart: always
   image: mariadb
