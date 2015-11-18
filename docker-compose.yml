@@ -6,7 +6,7 @@ themosis:
   links:
     - db
   volumes:
-    - ./www:/var/www/project
+    - .:/var/www/project
   environment:
     HOSTNAME: development
     VIRTUALHOST: themosis.dev
