@@ -12,7 +12,7 @@ themosis:
     VIRTUALHOST: themosis.dev
 db:
   restart: always
-  image: mariadb
+  image: mysql
   environment:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_DATBASE=themosis
